@@ -17,7 +17,7 @@ try {
 function getProducts()
 {
     global $db;
-    $sql = "select * from products";
+    $sql = "select * from products where active = 1";
    
     $qry = $db->query($sql);
     $products = $qry->fetchAll();
